@@ -1,9 +1,10 @@
 [build]
-  # El comando para compilar el sitio
-  command = "bundle exec jekyll build"
-  # La carpeta donde Jekyll escupe el HTML final
+  # Forzamos la instalación de gemas antes de construir
+  command = "bundle install && bundle exec jekyll build"
   publish = "_site"
 
-[context.production.environment]
-  # Esto evita errores de versión de Ruby
-  RUBY_VERSION = "3.2.2"
+[build.environment]
+  # Usamos una versión moderna pero estable de Ruby
+  RUBY_VERSION = "3.3.0"
+  # Evitamos errores de encoding
+  LC_ALL = "C.UTF-8"

@@ -3,5 +3,8 @@ source "https://rubygems.org"
 gem "jekyll"
 gem "webrick"
 
-# Estos son para compatibilidad
+# Parches para Ruby 3.x
+gem "erb"
+gem "logger"
+gem "base64"
 gem "kramdown-parser-gfm"

@@ -6,3 +6,4 @@ markdown: kramdown
 permalink: /:year/:month/:day/:title/
 theme: null
 future: true
+timezone: America/Denver

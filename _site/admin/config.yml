@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main
+
+#local_backend: true  #<-- Recuerda quitar/poner el hashtag según donde estés
+
+media_folder: "assets/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts/"
+    create: true
+    
+    # CAMBIO 1: El nombre del archivo será AÑO-MES-DIA-HORA-MINUTO
+    # Así no necesitas escribir un título para identificarlo.
+    slug: "{{year}}-{{month}}-{{day}}-{{hour}}{{minute}}"
+    
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      
+      # CAMBIO 2: ¡Adiós al campo Title! Lo borramos de aquí.
+      
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Mood", name: "mood", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}

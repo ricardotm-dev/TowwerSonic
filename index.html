@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+  <div class="post">
+    
+    <span class="meta">
+        {{ post.date | date: "%b %d, %Y at %I:%M %p" }} | 
+        Mood: {{ post.mood }}
+    </span>
+    
+    {{ post.content }}
+    
+  </div>
+{% endfor %}

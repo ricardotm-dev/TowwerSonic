@@ -1,0 +1,8 @@
+title: TowwerSonic
+description: "Status updates directly from the terminal."
+url: "https://TU_USUARIO.github.io" 
+baseurl: "/TowwerSonic" 
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+theme: null
+future: true

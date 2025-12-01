@@ -1,0 +1,9 @@
+[build]
+  # El comando para compilar el sitio
+  command = "bundle exec jekyll build"
+  # La carpeta donde Jekyll escupe el HTML final
+  publish = "_site"
+
+[context.production.environment]
+  # Esto evita errores de versión de Ruby
+  RUBY_VERSION = "3.2.2"
